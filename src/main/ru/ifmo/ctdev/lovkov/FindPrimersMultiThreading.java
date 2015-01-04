@@ -49,7 +49,7 @@ public class FindPrimersMultiThreading {
     }
 
 
-    private class GetPrimes implements Runnable {
+    private static class GetPrimes implements Runnable {
         private int start, finish;
         private AtomicInteger cntOfPrimes;
 

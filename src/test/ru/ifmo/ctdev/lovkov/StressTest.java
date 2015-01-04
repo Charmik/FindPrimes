@@ -4,14 +4,12 @@
 package test.ru.ifmo.ctdev.lovkov;
 
 import junit.framework.TestCase;
-import main.ru.ifmo.ctdev.lovkov.FindPrimers;
 import main.ru.ifmo.ctdev.lovkov.FindPrimersMultiThreading;
 
 import java.util.Random;
 
 public class StressTest extends TestCase {
 
-    FindPrimers findPrimers = new FindPrimers();
     FindPrimersMultiThreading findPrimersMultiThreading = new FindPrimersMultiThreading();
     Random random = new Random(System.currentTimeMillis());
     private static int maxValue = 10000000;
@@ -20,8 +18,8 @@ public class StressTest extends TestCase {
 
     public void testStressRandom() {
         for (int i = 0; i < cntIteration; i++) {
-            int start = Math.abs(random.nextInt()) % maxValue;
-            int finish = Math.abs(random.nextInt()) % maxValue;
+            int start = Math.abs(random.nextInt() % maxValue);
+            int finish = Math.abs(random.nextInt() % maxValue);
             if (start > finish) {
                 int tmp = start;
                 start = finish;

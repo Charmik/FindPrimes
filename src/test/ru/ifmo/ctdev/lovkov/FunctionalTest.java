@@ -10,6 +10,7 @@ import main.ru.ifmo.ctdev.lovkov.FindPrimersMultiThreading;
 import java.util.Random;
 
 public class FunctionalTest extends TestCase {
+    private static int maxValue = 10000000;
 
     FindPrimers findPrimers = new FindPrimers();
     FindPrimersMultiThreading findPrimersMultiThreading = new FindPrimersMultiThreading();
@@ -25,8 +26,8 @@ public class FunctionalTest extends TestCase {
     }
 
     public void testRandom() {
-        int start = Math.abs(random.nextInt()) % 1000;
-        int finish = Math.abs(random.nextInt()) % 1000;
+        int start = Math.abs(random.nextInt() % maxValue);
+        int finish = Math.abs(random.nextInt() % maxValue);
         if (start > finish) {
             int tmp = start;
             start = finish;
