@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int start = 13;
+        int start = 77;
         int finish = 10000;
 
         FindPrimers findPrimers = new FindPrimers();
